@@ -25,12 +25,6 @@ const locations = [
   "text": "You enter the cave. You see some monsters."},
 ];
 
-// initialize button
-
-button1.onclick = goStore();
-button2.onclick = goCave();
-button3.onclick = goTown();
-
 function update(loc){
   button1.innerText = loc["button text"][0];
   button2.innerText = loc["button text"][1];
@@ -52,3 +46,9 @@ function goCave(){
 function goTown(){
   update(locations[2]);
 }
+
+// initialize button
+
+button1.onclick = goStore();
+button2.onclick = goCave();
+button3.onclick = goTown();

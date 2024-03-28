@@ -1,5 +1,5 @@
 let xp = 0;
-let gold = 0;
+let gold = 50;
 let health = 100;
 let currentWeapon = 0;
 let fighting;
@@ -13,6 +13,8 @@ const text = document.querySelector("#text");
 const xpText = document.querySelector("#xpText");
 const goldText = document.querySelector("#goldText");
 const healthText = document.querySelector("#healthText");
+
+const weapons = []
 
 const locations = [
   {name:"town square",
@@ -62,8 +64,15 @@ function fightDragon(){
 }
 
 function buyHealth(){
-  gold -= 10;
-  health += 10;
+  if (gold >= 10){
+    gold -= 10;
+    health += 10;
+    healthText.innerText = health;
+    goldText.innerText = gold;
+  }
+  else{
+    text.innerText = "You don't have enough gold.";
+  }
 }
 
 function buyWeapon(){

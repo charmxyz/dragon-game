@@ -22,6 +22,13 @@ const weapons = [
   { name: 'claw hammer', power: 50 },
   { name: 'sword', power: 100 }
 ];
+
+const monsters = {
+  {name:"slime", level: 2, health: 15},
+  {name:"fanged beast", level: 8, health: 60},
+  {name:"dragon", level: 20, health: 300}
+}
+
 const locations = [
   {
     name: "town square",
@@ -102,11 +109,11 @@ function buyWeapon() {
   }
   else {
     text.innerText = "You already have the most powerful weapon!";
-    //button2.innerText = "Sell weapon";
-    //button2.onclick = sellWeapon;
+    button2.innerText = "Sell weapon";
+    button2.onclick = sellWeapon;
   }
-  button2.innerText = "Sell weapon";
-  button2.onclick = sellWeapon;
+  //button2.innerText = "Sell weapon";
+  //button2.onclick = sellWeapon; for testing functionality
 }
 
 function sellWeapon() {
@@ -122,9 +129,14 @@ function sellWeapon() {
 }
 
 function fightSlime() {
-
+  fighting = 0;
+  goFight()
 }
 
 function fightBeast() {
+
+}
+
+function goFight() {
 
 }
